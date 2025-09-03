@@ -5,3 +5,4 @@ from .rft import compute_rft
 from .damping import compute_damping_force
 from .hydrodynamics import compute_surface_viscous_drag
 from .thrust import compute_thrust_force_and_jacobian
+from .pressure import compute_pressure_forces

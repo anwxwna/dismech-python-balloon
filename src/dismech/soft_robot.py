@@ -41,7 +41,7 @@ class SoftRobot:
 
         self.__contact_pairs = [ContactPair(
             e, self.map_node_to_dof) for e in self.__edge_combos]
-        
+
         self.__triangle_contact_pairs = [ContactPair(
             t, self.map_node_to_dof) for t in self.__triangle_combos]
 
@@ -87,7 +87,7 @@ class SoftRobot:
         self.__voronoi_ref_len_all = self._get_voronoi_ref_len_all()
         self.__voronoi_area = self._get_voronoi_area()
         self.__face_area = self._get_face_area()
-
+        print("face areas ", self.__face_area)
     def _init_stiffness(self, geom: GeomParams, material: Material):
         """Initialize global stiffness properties"""
         self.__EA, self.__EI1, self.__EI2, self.__GJ = compute_rod_stiffness(
@@ -228,7 +228,7 @@ class SoftRobot:
         np.add.at(contributions, edges[:, 0], weights)
         np.add.at(contributions, edges[:, 1], weights)
         return contributions
-    
+
     def _get_voronoi_ref_len_all(self) -> np.ndarray:
         edges = self.__edges
         n_nodes = self.__n_nodes
@@ -257,6 +257,7 @@ class SoftRobot:
         v1 = self.__nodes[faces[:, 1]] - self.__nodes[faces[:, 0]]
         v2 = self.__nodes[faces[:, 2]] - self.__nodes[faces[:, 1]]
         cross = np.cross(v1, v2)
+        # print("cross",0.5 * np.linalg.norm(cross, axis=1))
         return 0.5 * np.linalg.norm(cross, axis=1)
 
     def scale_mass_matrix(self, nodes: int | np.ndarray, scale: float):
@@ -532,7 +533,7 @@ class SoftRobot:
     def bend_springs(self) -> BendSprings:
         """List of bend-twist spring elements"""
         return self.__bend_springs
-    
+
     @property
     def twist_springs(self) -> TwistSprings:
         """List of bend-twist spring elements"""
@@ -556,7 +557,7 @@ class SoftRobot:
     @property
     def contact_pairs(self):
         return self.__contact_pairs
-    
+
     @property
     def tri_contact_pairs(self):
         return self.__triangle_contact_pairs
@@ -589,12 +590,12 @@ class SoftRobot:
     def ref_len(self) -> np.ndarray:
         """Reference lengths for all edges (n_edges,)"""
         return self.__ref_len.view()
-    
+
     @property
     def voronoi_ref_len(self) -> np.ndarray:
         """Reference lengths for all edges (n_edges,)"""
         return self.__voronoi_ref_len.view()
-    
+
     @property
     def voronoi_ref_len_all(self) -> np.ndarray:
         """Reference lengths for all edges (n_edges,)"""

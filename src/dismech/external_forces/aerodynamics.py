@@ -284,7 +284,7 @@ def compute_aerodynamic_forces_vectorized(robot: SoftRobot, q: np.ndarray, u: np
             term_j = np.matmul(term_j, grad_cross)
             J_blocks[(i, j)][mask] = signs[i][mask][:, None, None] * coeff[mask] * \
                 dot_us[i][mask][:, None, None] * term_j[mask]
-    
+
 
     # --- Scatter all block contributions into global Jacobian ---
     if robot.sim_params.sparse:

@@ -39,9 +39,12 @@ class Environment:
         elif key == 'floorFriction':
             self.ground_mu = kwargs['mu']
             self.ground_vel_tol = kwargs['vel_tol']
+        elif key == 'pressure':
+            self.rho = kwargs['rho']    # REUSING
+            self.p = kwargs['p']
         else:
             raise KeyError
-        
+
         self.__ext_force_list.append(key)
 
     @property

@@ -1,0 +1,124 @@
+{
+    "model": "average_general_piecewise_linear_balloon",
+    "description": "Average model computed by averaging a, b, g0, and g1, while computing g_mid from the line connecting the averaged endpoint pressures.",
+    "entries": {
+        "folder=WHPeakCompare__Y110_W4_H40__runs=R1_R2": {
+            "folder_name": "WHPeakCompare",
+            "Y": 110,
+            "W": 4,
+            "H": 40,
+            "averaged_runs": [
+                1,
+                2
+            ],
+            "num_averaged_runs": 2,
+            "source_csv_paths": [
+                "D:\\ucla_research\\Projects\\arduino_sketches\\arduinoPy\\sensor_logs\\pciPV\\WHPeakCompare\\pciPV-WHPeakCompare-0_P1Y110W4H40T0N0xB_R1.csv",
+                "D:\\ucla_research\\Projects\\arduino_sketches\\arduinoPy\\sensor_logs\\pciPV\\WHPeakCompare\\pciPV-WHPeakCompare-0_P1Y110W4H40T0N0xB_R2.csv"
+            ],
+            "a": 1.2526931124065331e-05,
+            "b": 1.2586167335709663e-05,
+            "g0": 1111967.799539518,
+            "g1": 320303.99278270523,
+            "g_mid": -109677263.80782348,
+            "P_a_avg": 32.831690254857804,
+            "P_b_avg": 26.334824643366293,
+            "p0": 18.90214621784778,
+            "h_mid": 1387.8490736335582,
+            "h1": 3.4012787740596195,
+            "source_fit_json": "piecewise_balloon_fit_params_Y110.json",
+            "averaging_method": "mean_a_b_g0_g1_and_mid_slope_from_averaged_endpoint_pressures",
+            "note": "g_mid is not averaged directly. It is computed as (P_b_avg - P_a_avg) / (b_avg - a_avg), where P_a_avg and P_b_avg are the mean pressures at each fit model's own a_i and b_i."
+        },
+        "folder=WHPeakCompare__Y110_W4_H60__runs=R2_R3_R4": {
+            "folder_name": "WHPeakCompare",
+            "Y": 110,
+            "W": 4,
+            "H": 60,
+            "averaged_runs": [
+                2,
+                3,
+                4
+            ],
+            "num_averaged_runs": 3,
+            "source_csv_paths": [
+                "D:\\ucla_research\\Projects\\arduino_sketches\\arduinoPy\\sensor_logs\\pciPV\\WHPeakCompare\\pciPV-WHPeakCompare-0_P1Y110W4H60T0N0xB_R2.csv",
+                "D:\\ucla_research\\Projects\\arduino_sketches\\arduinoPy\\sensor_logs\\pciPV\\WHPeakCompare\\pciPV-WHPeakCompare-0_P1Y110W4H60T0N0xB_R3.csv",
+                "D:\\ucla_research\\Projects\\arduino_sketches\\arduinoPy\\sensor_logs\\pciPV\\WHPeakCompare\\pciPV-WHPeakCompare-0_P1Y110W4H60T0N0xB_R4.csv"
+            ],
+            "a": 1.4693289747690504e-05,
+            "b": 1.5839186175789234e-05,
+            "g0": 1229359.6536422845,
+            "g1": 326867.4757450167,
+            "g_mid": -7904707.672843353,
+            "P_a_avg": 35.67793954296652,
+            "P_b_avg": 26.6199632554907,
+            "p0": 17.614601947879994,
+            "h_mid": 134.20949780296624,
+            "h1": 3.828046504475111,
+            "source_fit_json": "piecewise_balloon_fit_params_Y110.json",
+            "averaging_method": "mean_a_b_g0_g1_and_mid_slope_from_averaged_endpoint_pressures",
+            "note": "g_mid is not averaged directly. It is computed as (P_b_avg - P_a_avg) / (b_avg - a_avg), where P_a_avg and P_b_avg are the mean pressures at each fit model's own a_i and b_i."
+        },
+        "folder=WHPeakCompare__Y110_W2_H60__runs=R1_R2_R3": {
+            "folder_name": "WHPeakCompare",
+            "Y": 110,
+            "W": 2,
+            "H": 60,
+            "averaged_runs": [
+                1,
+                2,
+                3
+            ],
+            "num_averaged_runs": 3,
+            "source_csv_paths": [
+                "D:\\ucla_research\\Projects\\arduino_sketches\\arduinoPy\\sensor_logs\\pciPV\\WHPeakCompare\\pciPV-WHPeakCompare-0_P1Y110W2H60T0N0xB_R1.csv",
+                "D:\\ucla_research\\Projects\\arduino_sketches\\arduinoPy\\sensor_logs\\pciPV\\WHPeakCompare\\pciPV-WHPeakCompare-0_P1Y110W2H60T0N0xB_R2.csv",
+                "D:\\ucla_research\\Projects\\arduino_sketches\\arduinoPy\\sensor_logs\\pciPV\\WHPeakCompare\\pciPV-WHPeakCompare-0_P1Y110W2H60T0N0xB_R3.csv"
+            ],
+            "a": 1.2453775395257692e-05,
+            "b": 1.2800871403272937e-05,
+            "g0": 895787.6544634107,
+            "g1": 285083.74072300614,
+            "g_mid": -11827235.912428746,
+            "P_a_avg": 30.584688766504204,
+            "P_b_avg": 26.47950239544564,
+            "p0": 19.42875051597218,
+            "h_mid": 158.4496778506453,
+            "h1": 3.401431575314234,
+            "source_fit_json": "piecewise_balloon_fit_params_Y110.json",
+            "averaging_method": "mean_a_b_g0_g1_and_mid_slope_from_averaged_endpoint_pressures",
+            "note": "g_mid is not averaged directly. It is computed as (P_b_avg - P_a_avg) / (b_avg - a_avg), where P_a_avg and P_b_avg are the mean pressures at each fit model's own a_i and b_i."
+        },
+        "folder=WHPeakCompare__Y110_W2_H40__runs=R1_R2_R3": {
+            "folder_name": "WHPeakCompare",
+            "Y": 110,
+            "W": 2,
+            "H": 40,
+            "averaged_runs": [
+                1,
+                2,
+                3
+            ],
+            "num_averaged_runs": 3,
+            "source_csv_paths": [
+                "D:\\ucla_research\\Projects\\arduino_sketches\\arduinoPy\\sensor_logs\\pciPV\\WHPeakCompare\\pciPV-WHPeakCompare-0_P1Y110W2H40T0N0xB_R1.csv",
+                "D:\\ucla_research\\Projects\\arduino_sketches\\arduinoPy\\sensor_logs\\pciPV\\WHPeakCompare\\pciPV-WHPeakCompare-0_P1Y110W2H40T0N0xB_R2.csv",
+                "D:\\ucla_research\\Projects\\arduino_sketches\\arduinoPy\\sensor_logs\\pciPV\\WHPeakCompare\\pciPV-WHPeakCompare-0_P1Y110W2H40T0N0xB_R3.csv"
+            ],
+            "a": 1.0552216722251403e-05,
+            "b": 1.1620714535066429e-05,
+            "g0": 1010422.0356996208,
+            "g1": 282548.50540863606,
+            "g_mid": -3333439.148865296,
+            "P_a_avg": 28.954277472951375,
+            "P_b_avg": 25.392505033236827,
+            "p0": 18.292085171310532,
+            "h_mid": 45.8373646309047,
+            "h1": 3.817004338262862,
+            "source_fit_json": "piecewise_balloon_fit_params_Y110.json",
+            "averaging_method": "mean_a_b_g0_g1_and_mid_slope_from_averaged_endpoint_pressures",
+            "note": "g_mid is not averaged directly. It is computed as (P_b_avg - P_a_avg) / (b_avg - a_avg), where P_a_avg and P_b_avg are the mean pressures at each fit model's own a_i and b_i."
+        }
+    }
+}

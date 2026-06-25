@@ -44,7 +44,17 @@ def compute_damping_force(robot: SoftRobot, q: np.ndarray, u: np.ndarray) -> typ
     n_nodes_rod = n_nodes - n_nodes_shell
     eta_v_shell = eta * np.ones((n_nodes_shell, 1))
     eta_shell_dof = np.repeat(eta_v_shell, 3)  # shape (3 * n_nodes,) per DOF
+
+    # Before:
     eta_v_rod = eta*0.005 * np.ones((n_nodes_rod, 1))
+
+    # After:
+    # if hasattr(robot.env, 'eta_rod_per_node') and robot.env.eta_rod_per_node is not None:
+    #     eta_v_rod = robot.env.eta_rod_per_node[:, None]   # (n_nodes_rod, 1)
+    # else:
+    #     eta_v_rod = eta * 0.005 * np.ones((n_nodes_rod, 1))
+
+
     eta_rod_dof = np.repeat(eta_v_rod, 3)  # shape (3 * n_nodes,) per DOF
 
     # Node DOF indices, shape (n_nodes, 3)

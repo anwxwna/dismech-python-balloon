@@ -48,6 +48,7 @@ class BendEnergy(ElasticEnergy):
         chi = 1.0 + np.sum(te * tf, axis=1)
         chi_inv = 1.0 / chi
         kb = 2.0 * np.cross(te, tf) * chi_inv[:, None]
+        # print("kb:\n", kb)  # shape (N_bend_elements, 3) 
 
         kappa1 = 0.5 * np.sum(kb * (m2e + m2f), axis=1)
         kappa2 = -0.5 * np.sum(kb * (m1e + m1f), axis=1)
